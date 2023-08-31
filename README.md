@@ -1,6 +1,6 @@
 # katie-gibson.github.io
 
-### This repo is for a class I'm taking called Web
+### My name is Katie & I'm from Colorado. This repo is for a class I'm taking called Web.
 ### Some things about me:
 1. I love to run
 2. I'm a senior and am currently excited and also freaking out about what I'm doing after I graduate
