@@ -17,7 +17,6 @@
     margin: 20px auto;
     position: relative;
     background: url(/ICA/ICA6/top.png) top no-repeat, url(/ICA/ICA6/bottom.png) bottom no-repeat;
-    background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(115,115,115,1) 100%);
     background-color: white;
     border-top: 1mm solid red;
     border-bottom: 1mm solid red;
