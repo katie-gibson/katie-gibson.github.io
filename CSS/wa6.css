@@ -1,0 +1,105 @@
+/* general */
+p {
+    color: white;
+    margin: 15px;
+}
+h2 {
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+}
+
+/* background */
+body {
+    background-image: url(/IMG/oats.JPG);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top;
+    background-color: white;
+    max-width: fit-content;
+    text-align: center;
+}
+
+/* overlay: score */
+.container {
+    position: absolute;
+    top: 5em;
+    left: 5em;
+    text-align: center;
+    width: 300px;
+}
+
+.box1, .box2 {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+}
+
+.box1 {
+    background-color: white;
+    border: 2px solid black;
+    text-align: right;
+}
+
+.box2 {
+    background-color: white;
+    border: 2px solid black;
+    left: 150px;
+    text-align: left;
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: -60em;
+    top: -2em;
+}
+.scorebox1, .scorebox2 {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 1.5em;
+    background-color: black;
+    border: .5px solid white;
+}
+
+.scorebox1 {
+    left: -3em;
+    text-align: left;
+    color: white;
+}
+
+.scorebox2 {
+    left: 0px;
+    text-align: right;
+    color: white;
+}
+
+.sb1text, .sb2text {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 1.5em;
+}
+
+.sb1text {
+    top: -.3em;
+    right: 20px;
+    text-align: right;
+    color: white;
+}
+
+.sb2text {
+    top: -.3em;
+    left: 20px;
+    text-align: left;
+    color: white;
+}
+
+/* overlay: logo */
+
