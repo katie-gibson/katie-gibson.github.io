@@ -2,7 +2,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgb(242, 253, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: rgb(17, 54, 26);
 }
 nav{
     height: 50vh;
@@ -10,27 +15,41 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     height:20px;
-    background-color: blueviolet;
+    background-color: rgb(17, 54, 26);
+    width: 100vw;
 }
 nav a{
     width:10vw;
     text-align: center;
     text-decoration: none;
-    color:black;
+    color:white;
 }
 
 
-img{
-    width:30vw;
-    height: 30vh;
+img.trees{
+    width: 30vw;
+    height: auto;
+    margin: 2%;
 }
 
-#red-ball{
-    background-color: crimson;
-    width: 20px;
-    height:20px;
-    border-radius: 50%;
+img.trees:hover {
+    width: 40vw;
+    height: auto;
+    color: rgb(17, 54, 26);
+    box-shadow: 0 0 2em rgb(17, 54, 26);
+    text-shadow: 0 0 2em rgb(17, 54, 26);
+}
+
+img.ufo {
+    width: 8vw;
+    height: auto;
     position: absolute;
     left:5vw;
-    top:0;
+    top:0; 
+}
+
+img.ufo:hover {
+    width: 12vw;
+    height: auto;
+    transform: rotate(30deg);
 }
