@@ -223,19 +223,20 @@ p {
 #title.container h1 {
     font-size: 7vw;
     margin-top: 9%;
-    -webkit-text-stroke: .5px #041f31;
+    text-shadow: 2px 2px #041f31;
 }
 
 #title.container h3 {
     font-size: 5vw;
     color: #ffffff;
-    -webkit-text-stroke: .5px #041f31;
+    text-shadow: 2px 2px #041f31;
 }
 
 #title.container div a h4 {
     font-size: 3vw;
     color: #ffffff;
     margin-top: 7%;
+    text-shadow: 2px 2px #041f31;
 }
 
 .info {
