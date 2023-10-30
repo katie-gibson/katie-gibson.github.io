@@ -1,11 +1,309 @@
+@font-face {
+    font-family: SymphonyFont;
+    src: url(Gagkline.otf);
+}
+
+/* general */
+nav h1 {
+    font-size: x-large;
+    color: #041f31;
+    font-family: SymphonyFont;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #041f31;
+}
+
+p.cool {
+    color: #6f98b3;
+    text-align: left;
+    font-size: larger;
+    font-family: SymphonyFont;
+}
+
 /* home page css */
 .container {
-    width: 90vw;
-    height: 60vw;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+#hero.container {
     background: url(symphony.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
+    opacity: 80%;
+}
+
+#title.container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    text-align: center;
+    justify-content: center;
+    line-height: 1%;
+    color: white;
+    font-family: SymphonyFont;
+}
+
+#title.container h1 {
+    font-size: 8vw;
+    margin-top: 11%;
+    color: #ffffff;
+    text-shadow: 2px 2px #041f31;
+}
+
+#title.container h3 {
+    font-size: 5vw;
+    color: #ffffff;
+    text-shadow: 2px 2px #041f31;
+}
+
+#title.container div a h4 {
+    font-size: 3vw;
+    color: #ffffff;
+    margin-top: 7%;
+    text-shadow: 2px 2px #041f31;
+}
+
+.info {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    font-size: larger;
+    line-height: 35px;
+    text-align: center;
+    margin: 1%;
+}
+
+/* events page css  */
+li {
+    color: #041f31;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    font-size: small;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 50vh);
+    gap: 5%;
+    padding: 2%;
+}
+
+.contain {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    display: grid;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .contain:hover .overlay {
+    opacity: 1;
+    background-color: #ffffff;
+    color: #041f31;
+    text-align: center;
+    line-height: 35px;
+    overflow: scroll;
+    margin: 1%;
+  }
+
+
+  /* screen adjust */
+  @media only screen and (max-width: 400px) {
+    p {
+        font-size: 80%;
+    }
+    .container {
+        margin-top: -17%;
+        margin-bottom: -17%;
+    }
+
+    #title.container h1 {
+        font-size: 7vw;
+        margin-top: 50%;
+        -webkit-text-stroke: 2px #041f31;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 75vh);
+        gap: 1%;
+        padding: 2%;
+  }
+}
+
+  @media only screen and (max-width: 700px) {
+    p {
+        font-size: 80%;
+    }
+    .container {
+        margin-top: -17%;
+        margin-bottom: -17%;
+    }
+
+    #title.container h1 {
+        font-size: 7vw;
+        margin-top: 50%;
+        -webkit-text-stroke: 2px #041f31;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 75vh);
+        gap: 1%;
+        padding: 2%;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+/* general */
+nav h1 {
+    font-family: SymphonyFont;
+    font-size: x-large;
+    color: #041f31;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #041f31;
+}
+
+/* home page css */
+.container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+#hero.container {
+    background: url(symphony.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    opacity: 85%;
+}
+
+#title.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    line-height: 3%;
+    color: white;
+    font-family: SymphonyFont;
+}
+
+#title.container h1 {
+    font-size: 7vw;
+    margin-top: 9%;
+    -webkit-text-stroke: .5px #041f31;
+}
+
+#title.container h3 {
+    font-size: 5vw;
+    color: #ffffff;
+    -webkit-text-stroke: .5px #041f31;
+}
+
+#title.container div a h4 {
+    font-size: 3vw;
+    color: #ffffff;
+    margin-top: 7%;
+}
+
+.info {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    font-size: larger;
+    line-height: 35px;
+    text-align: center;
+    margin: 1%;
+}
+
+/* events page css  */
+ul {
+    color: #6f98b3;
+    text-align: left;
+    font-size: larger;
+}
+
+li {
+    color: #041f31;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    font-size: smaller;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 50vh);
+    gap: 5%;
+    padding: 2%;
+}
+
+.contain {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    display: grid;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .contain:hover .overlay {
+    opacity: 1;
+    background-color: #ffffff;
+    color: #041f31;
+    text-align: center;
+    line-height: 35px;
+    overflow: scroll;
+    margin: 1%;
+  }
 }
