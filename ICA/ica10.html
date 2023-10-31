@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA10</title>
+</head>
+<body>
+    <div type="background">
+      <button type="button">Player 1: Name</button>  
+    </div>
+    <button id="try">Crazy</button>
+    <h1 id="text"></h1>
+    <h1 id="hover">Wazzup</h1>
+    <b id="effect"></b>
+
+    <script>
+        document.getElementById("try").addEventListener("click", function() { document.getElementById("text").innerText = 'I was crazy once'})
+
+
+
+
+        const button = document.querySelector("button");
+        let background = document.querySelector("div");
+
+        button.addEventListener('click', updateName);
+        background.addEventListener('mouseover', changeColor);
+
+
+        function updateName() {
+            let name = prompt('Enter a New Name');
+            button.textContent = `Player 1: ${name}`;
+        }
+
+        function changeColor() {
+            style.color = 'red';
+            background.onmousedown = rbga(0,0,0,.25);
+        }
+    </script>
+
+
+</body>
+</html>
