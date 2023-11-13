@@ -1,0 +1,50 @@
+h1 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3vw;
+  color: rgb(8, 50, 8);
+  text-align: center;
+}
+
+body {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.full-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 24%;
+  width: fit-content;
+  height: auto;
+  padding: 1%;
+}
+
+div.full-img .overlay {
+  position: absolute;
+  top: -100;
+  left: -100;
+  width: 320px;
+  height: 320px;
+  background-color: rgba(0,0,0,0);
+}
+
+button {
+  border: 0;
+  background: rgba(136, 160, 141, 0.706);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid #ffffffab;
+  position: absolute;
+  cursor: pointer;
+  display: inline;
+  margin-top: 20%;
+}
+
+.thumb-bar img {
+  display: block;
+  width: 19%;
+  float: left;
+  cursor: pointer;
+  padding-left: 1%;
+}
