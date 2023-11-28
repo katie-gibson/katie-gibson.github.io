@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+    </section>
+
+    <script>
+      const section = document.querySelector('section');
+
+      let para1 = document.createElement('p');
+      let para2 = document.createElement('p');
+      let motherInfo = 'The mother cats are called ';
+      let kittenInfo = 'The kittens are called ';
+      const requestURL = "quiz13.json"; // Replace with the correct path to your JSON file
+
+      fetch(requestURL)
+        .then(response => response.json())
+        .then(data => displayCatInfo(data));
+
+      function displayCatInfo(catData) {
+        for (let i = 0; i < catData.length; i++) {
+          motherInfo += catData[i].name;
+          if (i < catData.length - 1) {
+            motherInfo += ', ';
+          } else {
+            motherInfo += ' and ';
+          }
+        }
+
+        let totalKittens = 0;
+        let maleKittens = 0;
+        let femaleKittens = 0;
+
+        for (let mother of catData) {
+          for (let kitten of mother.kittens) {
+            totalKittens++;
+            if (kitten.gender === 'm') {
+              maleKittens++;
+            } else if (kitten.gender === 'f') {
+              femaleKittens++;
+            }
+          }
+        }
+
+        kittenInfo += `${totalKittens} kittens in total, ${maleKittens} males, and ${femaleKittens} females.`;
+
+        // Set the text content inside the function
+        para1.textContent = motherInfo;
+        para2.textContent = kittenInfo;
+
+        // Append paragraphs to the section
+        section.appendChild(para1);
+        section.appendChild(para2);
+      }
+    </script>
+
+  </body>
+</html>
