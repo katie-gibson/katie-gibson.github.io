@@ -1,22 +1,56 @@
+/* general styling */
 body {
     background-color: wheat;
-}
-
-section.phoneContainer {
-    width: 500px;
-    height: 600px;
-    margin: auto;
-}
-
-section div.dials {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: space-evenly;
-}
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-button {
+  img {
+    width: 5vw;
+    padding: 25%;
+    position: sticky;
+  }
+
+/* output styling aka where the phone number appears */
+  .outputContainer {
+    width: 35vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: blue;
+  }
+  
+  #outputCont {
+    font-size: 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+/* phone number buttons styling */
+  .phoneContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .dials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    align-items: center;
+  }
+  
+  button {
     background-color: darkolivegreen;
     color: white;
     border: none;
@@ -25,12 +59,13 @@ button {
     height: 10vw;
     font-size: 5vw;
     margin: 2%;
-}
+  }
+  
+  button.empty {
+    background-color: rgba(255, 255, 255, 0);
+  }  
 
-button.empty {
-    background-color: rgba(255,255,255,0);
-}
-
+/* styling for a different screen size aka phone styling */
 @media only screen and (max-width: 600px){
     body{
         /*change max-width to 425px for phone use*/
