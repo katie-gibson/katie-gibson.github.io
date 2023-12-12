@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function makeCall() {
         // Implement your 'call' button functionality here
         // For example, you can display a message or perform a specific action
-        alert('Calling...');
+        alert(`I Would Call U But It's 2 Annoying`);
     }
 
     // function resets the output container

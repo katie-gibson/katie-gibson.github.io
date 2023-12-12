@@ -1,6 +1,6 @@
 /* general styling */
 body {
-    background-color: rgb(179, 220, 245);
+    background-image: url(iwcubi2a.jpg);
     margin: 0;
     height: 100vh;
     display: flex;
@@ -17,6 +17,8 @@ body {
 
   .container {
     margin:auto;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 25px;
   }
 
 /* output styling aka where the phone number appears */
@@ -31,11 +33,12 @@ body {
   }
   
   #outputCont {
-    font-size: 5vw;
+    font-size: 6vw;
     text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    color: rgb(217, 85, 158);
   }
 
 /* phone number buttons styling */
