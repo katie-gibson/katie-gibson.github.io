@@ -78,7 +78,7 @@ body {
   }  
 
 /* styling for a different screen size aka phone styling */
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 600px){
     body {
         background-color: white;
     }
@@ -87,6 +87,12 @@ body {
         width: 8vw;
         padding: 25%;
         position: sticky;
+      }
+
+      .container {
+        margin:auto;
+        background-color: rgba(255, 255, 255, 0.75);
+        border-radius: 25px;
       }
 
     /* output styling aka where the phone number appears */
@@ -128,8 +134,8 @@ body {
     color: black;
     border: none;
     border-radius: 100%;
-    width: 17vw;
-    height: 17vw;
+    width: 50px;
+    height: 50px;
     font-size: 10vw;
     margin: 2%;
     cursor: pointer;
