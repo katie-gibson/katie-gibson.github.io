@@ -16,79 +16,96 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.dials button');
     let clickCount = 0;
 
-    // array to track displayed numbers
-    let displayedNumbers = [];
-
     // event listener to tell when each button has been pushed/clicked & what to do when that event occurs
     buttons.forEach(function (button) {
         button.addEventListener('click', function () {
             const buttonID = button.id;
 
-            // if the backspace button is clicked, use that function
+            // handle 'backspace' button
             if (buttonID === 'backspace') {
                 useBackspace();
-            } else {
-                // generate random numbers for all buttons
-                displayedNumbers = getRandomNumbers();
-
-                // display the randomly selected numbers on the buttons
-                buttons.forEach(function (button, index) {
-                    button.innerText = displayedNumbers[index];
-                });
-
-                // check if 10 numbers have been clicked, then reset
-                if (clickCount === 10) {
-                    resetOutput();
-                } else {
-                    // increment the click count
-                    clickCount++;
-                }
+            } 
+            // handle 'call' button
+            else if (buttonID === 'call') {
+                makeCall();
+                resetOutput();
+            } 
+            // handle number buttons
+            else if (buttonID.startsWith('number-')) {
+                generateNewNumbers(button);
             }
         });
     });
 
     // functions
+    // function generates new random numbers for all number buttons and updates output
+    function generateNewNumbers(clickedButton) {
+        // create a div for the output
+        const output = document.createElement('div');
+        output.classList.add('output');
+
+        // capture the current number on the clicked button
+        const currentNumber = clickedButton.innerText;
+
+        // iterate through number buttons and generate new random numbers
+        buttons.forEach(function (button) {
+            if (button.id.startsWith('number-')) {
+                const randomNumber = Math.floor(Math.random() * 10);
+                button.innerText = randomNumber;
+
+                // display the captured current number for the clicked button
+                if (button === clickedButton) {
+                    output.innerText = `${currentNumber}`;
+                }
+            }
+        });
+
+        // append the output div to the output container
+        outputContainer.appendChild(output);
+
+        // check if 10 numbers have been clicked, then reset
+        if (clickCount === 10) {
+            resetOutput();
+        } else {
+            // increment the click count
+            clickCount++;
+        }
+    }
+
     // function enables the use of a backspace button
     function useBackspace() {
-        // iterate through buttons and clear text content
-        buttons.forEach(function (button) {
-            button.innerText = '';
-        });
+        // get the last child (aka number) of the output container
+        const lastOutput = outputContainer.lastChild;
 
-        // reset the displayed numbers array
-        displayedNumbers = [];
+        // remove the last output if it exists
+        if (lastOutput) {
+            outputContainer.removeChild(lastOutput);
 
-        // reset the click count
-        clickCount = 0;
+            // decrement the click count
+            clickCount = Math.max(0, clickCount - 1);
+        }
     }
 
-    // function resets the output container and the displayed numbers array
+    // function handles the 'call' button functionality
+    function makeCall() {
+        // Implement your 'call' button functionality here
+        // For example, you can display a message or perform a specific action
+        alert('Calling...');
+    }
+
+    // function resets the output container
     function resetOutput() {
-        // iterate through buttons and clear text content
-        buttons.forEach(function (button) {
-            button.innerText = '';
-        });
-
-        // reset the displayed numbers array
-        displayedNumbers = [];
-
-        // reset the click count
+        outputContainer.innerHTML = '';
         clickCount = 0;
-    }
-
-    // function generates an array of random numbers between 0 and 9
-    function getRandomNumbers() {
-        return Array.from({ length: buttons.length }, function () {
-            return Math.floor(Math.random() * 10).toString();
-        });
     }
 });
 
 
 
-        
-        
-        
-        
-          
-          
+
+
+
+
+
+
+
