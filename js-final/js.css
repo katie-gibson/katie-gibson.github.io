@@ -78,11 +78,7 @@ body {
   }  
 
 /* styling for a different screen size aka phone styling */
-@media only screen and (max-width: 600px){
-    body{
-        /*change max-width to 425px for phone use*/
-        background-color: aqua;
-    }
+@media only screen and (max-width: 425px){
 
     img {
         width: 8vw;
