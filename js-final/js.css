@@ -72,7 +72,7 @@ body {
   }
 
   button#call:active {
-    transform: scale(1.5); /* Adjust the scale factor as needed */
+    transform: scale(1.5);
 }
   
   button.empty {
@@ -147,7 +147,7 @@ body {
   }
 
   button#call:active {
-    transform: scale(1.5); /* Adjust the scale factor as needed */
+    transform: scale(1.5);
 }
   
   button.empty {

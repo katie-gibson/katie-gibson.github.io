@@ -1,15 +1,3 @@
-// define all number (aka dial) buttons
-//const btn = document.querySelector("button");
-//btn.addEventListener("click", () => FUNCTION);
-// button pressed output
-// when a button is pressed all dial buttons change to a random number 0-9
-    // if buttonPushed, display number in output & randomize numbers on dial
-    // if button number already displayed on screen, choose another number at random, repeat for all buttons
-        // if var1 == var2 && var3 && var4 ... chooseNewValue, else displayValue
-
-// if clickCount === 10 && button w/ callID is clicked (eventListener) --> increase the size of outputContainer && reset
-// add a function that randomly selects a number 0-9 for buttonText but doesn't repeat a number on the screen, change this variable to a "let" 
-
 document.addEventListener('DOMContentLoaded', function () {
     // defining variables
     const outputContainer = document.getElementById('outputCont');
@@ -86,10 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // function handles the 'call' button functionality
+    // function handles the 'call' button functionality & displays message alert
     function makeCall() {
-        // Implement your 'call' button functionality here
-        // For example, you can display a message or perform a specific action
         alert(`I Would Call U But It's 2 Annoying`);
     }
 
